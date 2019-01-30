@@ -26,15 +26,21 @@ function Game(){
     function Outside(){
         var outside = prompt("You arrive at the house party. Just in the drive way you decide to look around. The house looks quite homely and there is a bit of a humble charm about it. There are a couple of other cars parked around but nothing you recognize. There is nothing out of the ordinary out there. You do however notice a pathway leading to the back of the house. \n - Go through the back pathway \n - Go through the front door.").toLowerCase();
         
-        if(outside == "Go through the back pathway" || outside == "Back Pathway"){
+        if(outside == "go through the back pathway" || outside == "back pathway" || outside == "bp"){
+            var Pathway = prompt("The pathway was a gravel path that led all the way to the back door. Well walking past you couldn't help but see a pipe on the ground. \n - Take pipe \n - Keep walking");
             
-            
-            var backPathway = prompt("The pathway was a gravel path that led all the way to the back door. Well walking past you couldn't help but see a pipe on the ground. \n - Take pipe \n - Keep walking");
+            if(Pathway == "take pipe" || "tp"){
+                alert("As you reach for the pipe you failed to notice the loose rock sticking out of the ground... Tripping you try to catch yourself but fail and fall face first into an electric box... Game over!")}
+                
+                else if( Pathway == "keep walking" || Pathway == "kw"){
+                    var Backdoor = prompt("As you walk forward you can see lights coming from the windows. It's not to big of a party maybe only around 6 people but it's perfect for you nonetheless. You're at the back door. \n - enter \n - leave party");
+                }
+            }
         }
-        else{
+        
+        else {
             alert("I don't know what "+outside+" is!")
             Outside();
         }
             
     }
-}

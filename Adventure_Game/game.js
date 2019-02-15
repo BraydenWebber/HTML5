@@ -50,10 +50,24 @@ switch(outside){
                 
                 if(Enter == "sit down with them" || Enter == "sdwt"){
                     var Sit = prompt("You decide to sit down with the group and decide to sit next to Jeremy. He slowly introduces you to the group. Out of the seven of you (including you) there are 3 girls and 4 guys. There is Sara Jeremys girlfriend, brooklyn, Mei, Jackson and Tyler. \n - Look at (put name) \n - continue with the party");
+                    
+                    if(Sit == "look at sara" ){
+                        alert("Sara was a cute short girl with bright red hair. She smiled at you as you looked up at her.");
+                    }
+                    else if(Sit == "look at brooklyn"){
+                        alert("Brooklyn is a cold white girl dressed in all black with black makeup. She seems cheerful and comfortable at this party but overall is off putting.");
+                    }
+                    else if (Sit == "look at mei"){
+                        alert("Mei is a nice cheerful girl that has these bright green eyes and long black hair. She smiles at you with a crooked smile. There is a eager fire in her eyes. You look forward to meeting her later.");
+                    }
+                    else if(Sit == "look at jackson"){
+                        alert("As soon as you look up at Jackson he shoots you back with a smile and a 'hi.' He appears to be a nerd but afraid to make any assumptions you look away." );
+                    }
                 }
                 else if(Enter == "leave" || Enter == "l"){
                    alert("You frantically shut the door and run away. Nobody knows why you just decided to leave some people theorise that you couldn't take the social pressure. Either way you aren't at the party so I guess... game over.");
                 }
+                
                 
             }
             else if (Decide == "leave party" || "lp"){

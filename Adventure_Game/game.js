@@ -52,7 +52,7 @@ Hole();
         var hallway = prompt("\n - go through the green lush hallway \n - go through the fancy one");
         if(hallway == "go through the green lush hallway" || hallway == "gttglh"){
             alert("Well walking through the lush green hallway you notice the walls just sort of fade away.");
-            Lush();
+            //Lush();
         }
         else if(hallway == "go through the fancy one" || hallway == "gttfo"){
             alert("The fancy hallway was cold. You couldn't make out what it was but it sounded like cheering. A bunch of people came rushing past you from behind. They all looked so strange. Some with fish for heads others with lion feet everyone was so unique in some strange way.");
@@ -61,6 +61,7 @@ Hole();
     }
 }
 
+/*
 function Lush {
     alert("Until you look back and notice that the whole hallways and hole are completely gone. Looking forward brings a whole new story to light. There are dark brown trees with bright green leaves on the trees. You think you can see monkeys swinging on branches a distance up ahead but something else quickly catches your attention. You see a nice bright garden with huge flowers of all kind of colors!");
     var choice = prompt("With such excitement you can't help but get giddy about your next choice! \n - garden \n- hopefully monkeys");
@@ -199,7 +200,7 @@ function Options{
                   inventory.eyeball += 1;
                   Options();
                   */
-
+/*
 function Fancy {
     alert("Suddenly a whole Lion just picked you up on your back and started to run with the rest of the crowd. You weren't scared you were to fascinated with how everybody looked. Each one weird and crazy you could't help but look.");
     var castle = prompt("The lion and crowd were all headed to a castle. Looking back you couldn't tell that there was even a hallway there it was just gone. The lion asked if you wanted him to take you straight to the tournament or if you would rather get there on your own. \n - go with the lion \n - explore on your own");

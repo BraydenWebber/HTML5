@@ -203,16 +203,20 @@ function Cat(){
     
 function Options(){
     var catseye = prompt("\n - take eyeball \n - leave the forest");
-    if(catseye == "leave the forest" || catseye == "ltf"){
+    switch(catseye){
+        case "leave the forest":
+        case "ltf":
         alert("after a long day in the forest it's nice to have finally gotten out. You decide to head to the tournament with the directions from the invite.");
         Tournament();
+            break;
     }
-    else if(catseye == "take eyeball" || catseye == "te"){
-              alert("FIGURE THIS OUT");
+    if(catseye == "take eyeball" || catseye == "te"){
+              alert("You take the eyeball");
                   inventory.eyeball += 1;
                   Options();
     }
-}
+            
+    }
 
 function Fancy(){
     alert("Suddenly a whole Lion just picked you up on your back and started to run with the rest of the crowd. You weren't scared you were to fascinated with how everybody looked. Each one weird and crazy you could't help but look.");

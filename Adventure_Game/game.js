@@ -1,16 +1,23 @@
+//44
+var playerName;
+var inventory ={
+    eyeball: 1,
+}
+
+
 Game();
 function Game(){
 alert ("The Mad Adventure");
 var playerName = prompt("What is your name?");
 while(!confirm("Are you sure you want " +playerName+ " as your name?")){
-prompt("What name do you want than?!");
+    playerName = prompt("What name do you want than?!");
 }
     
 alert("Im glad you decided to come " +playerName);
 Outside();
-}
+
 /*
-var inventory{
+var inventory ={
     eyeball: 1,
 };
   */  
@@ -20,11 +27,12 @@ function Outside() {
     var outside = prompt("This rabbit was wearing a nice velvet coat and was talking! You couldn't quite make out what he was saying but he was definitely talking! \n - chase rabbit \n - stay on the porch");
     if(outside == "stay on the porch" || outside == "sotp"){
      alert("Congradulations on being the funnest adventrurer ever and having a boring time... You stay on the porch and have a broing day. the end");
-    Game();   
+        
+       
     }
     else if(outside == "chase rabbit" || outside == "cr"){
         alert("You hop up on your feet and get ready for the adventure at hand!");
-        var chicken = prompt("You see the rabbit quickly jumps behind an old stump in the ground. Peering around the stump reveals the rabbit knocking on the stump in some sort of rhythmic sequence. suddenly the ground opens up to reveal a hole in the ground! The rabbit hastily jumps down. \n - jump in after him n\ - leave");
+        var chicken = prompt("You see the rabbit quickly jumps behind an old stump in the ground. Peering around the stump reveals the rabbit knocking on the stump in some sort of rhythmic sequence. suddenly the ground opens up to reveal a hole in the ground! The rabbit hastily jumps down. \n - jump in after him \n - leave");
         if(chicken == "jump in after him" || chicken == "jiah"){
             alert("You jump in without a care in the world.");
 Hole();
@@ -35,7 +43,12 @@ Hole();
         Game();
 
         }
+      
     }
+       else{
+             alert("I didn't understand that...");
+             Outside();
+         }
 }
 
 function Hole() {
@@ -52,17 +65,20 @@ Hole();
         var hallway = prompt("\n - go through the green lush hallway \n - go through the fancy one");
         if(hallway == "go through the green lush hallway" || hallway == "gttglh"){
             alert("Well walking through the lush green hallway you notice the walls just sort of fade away.");
-            //Lush();
+            Lush();
         }
         else if(hallway == "go through the fancy one" || hallway == "gttfo"){
             alert("The fancy hallway was cold. You couldn't make out what it was but it sounded like cheering. A bunch of people came rushing past you from behind. They all looked so strange. Some with fish for heads others with lion feet everyone was so unique in some strange way.");
-           // Fancy();
+           Fancy();
         }
+    }
+    else{
+        alert("I did't get that...");
+        Hole();
     }
 }
 
-/*
-function Lush {
+function Lush(){
     alert("Until you look back and notice that the whole hallways and hole are completely gone. Looking forward brings a whole new story to light. There are dark brown trees with bright green leaves on the trees. You think you can see monkeys swinging on branches a distance up ahead but something else quickly catches your attention. You see a nice bright garden with huge flowers of all kind of colors!");
     var choice = prompt("With such excitement you can't help but get giddy about your next choice! \n - garden \n- hopefully monkeys");
     if(choice == "hopefully monkeys" || choice == "hm"){
@@ -73,7 +89,7 @@ function Lush {
         alert("The garden is a nice pleasant colorful place full of all sorts of bugs. Not the creepy ones but full of things like crickets, snails, slugs, and even caterpillars!");
         var garden = prompt("You see a nice little crack between the leaves. Taking a look you see a larger looking ant with a crown on top of its head. \n - go talk to the ant \n - throw a rock at the ant");
         if(garden == "throw a rock at the ant" || garden == "tarata"){
-            alert("Now I have no idea why" +playerName+ "decided to throw a rock at the king of ants but you made the bed and now" +playerName+ "has to sleep in it! An army of ants come rushing out from the plants with swords and armor to fight off the the king slayer. To no surprise you lost to an army of thousands of ants and died a horrible death that was well deserved! Game over!");
+            alert("Now I have no idea why " +playerName+ " decided to throw a rock at the king of ants but you made the bed and now " +playerName+ " has to sleep in it! An army of ants come rushing out from the plants with swords and armor to fight off the the king slayer. To no surprise you lost to an army of thousands of ants and died a horrible death that was well deserved! Game over!");
             Lush();
         }
         else if(garden == "go talk to the ant" || garden == "gttta"){
@@ -118,7 +134,7 @@ function Lush {
     }
 }
     
-function Monkey{
+function Monkey(){
     alert("The pathway was nice and carved out. A couple trees here and there that have been completely cut down but nothing to strange. The forest was getting darker the more you walked through. you couldn't see any monkeys anymore... You couldn't even hear them. You came upon a cave.");
     var cave = prompt("\n - enter the cave \n - keep moving");
     if(cave == "enter the cave" || cave == "etc"){
@@ -130,13 +146,14 @@ function Monkey{
     }
 }
     
-function Cave{
+function Cave(){
     alert("The cave wasn't dark. Actually it was quite bright. The room however had strange markings on it and weird symbols no sane man could make out.");
     var markings = prompt("The cave was large and you had only explored about half of it. Who knows what else could be in here! \n - Try to make sense of the symbols \n - look around");
     if(markings == "try to make sense of the symbols" || markings == "ttmsots"){
         var game = prompt("The markings kind of look like letters... You can make out a couple of letters of the mess. The letters you see are: u,l,a,g,h,g,n, and i. As well as two words: the and smile \n - what is the phrase listed \n - no i dont");
         if(game == "the laughing smile" || game == "tls"){
             alert("Congratulations!!! The cave opens up a hidden wall that reveals unmeasurable treasure. You reach out your arms to grab it all and fall off of your dads porch. The end ;P");
+            Game();
         }
         else if(game == "no i dont" || game == nid){
              alert("flustered and angry at your own stupidity you leave the cave discouraged.");
@@ -156,13 +173,13 @@ function Cave{
     }
 }
     
-function Cat{
+function Cat(){
     alert("Seeing the cave makes you feel defeated");
     alert("You are lost in the forest...");
     var lost = prompt("Seeing as your lost there is not much for you to do. You can look around or pick a direction and start walking \n - look around \n - pick a direction");
     if(lost == "pick a direction" || lost == "pad"){
         alert("You pick a random direction and start walking. In about an hour you find yourself lost again... The funny thing is you are right back to where you started...");
-        Cave();
+        Cat();
     }
     else if(lost == "look around" || lost == "la"){
         alert("looking around you see some pretty alarming things... There are claw marks placed on certain trees. It's almost like a perfectly placed pathway. Seeing this you decide to follow.");
@@ -184,24 +201,20 @@ function Cat{
     }
 }
     
-function Options{
+function Options(){
     var catseye = prompt("\n - take eyeball \n - leave the forest");
     if(catseye == "leave the forest" || catseye == "ltf"){
         alert("after a long day in the forest it's nice to have finally gotten out. You decide to head to the tournament with the directions from the invite.");
+        Tournament();
     }
     else if(catseye == "take eyeball" || catseye == "te"){
-        alert("FIGURE THIS OUT");
-        Options();
-    }
-}
-    /* 
-          else if(catseye == "take eyeball" || catseye == "te"){
               alert("FIGURE THIS OUT");
                   inventory.eyeball += 1;
                   Options();
-                  */
-/*
-function Fancy {
+    }
+}
+
+function Fancy(){
     alert("Suddenly a whole Lion just picked you up on your back and started to run with the rest of the crowd. You weren't scared you were to fascinated with how everybody looked. Each one weird and crazy you could't help but look.");
     var castle = prompt("The lion and crowd were all headed to a castle. Looking back you couldn't tell that there was even a hallway there it was just gone. The lion asked if you wanted him to take you straight to the tournament or if you would rather get there on your own. \n - go with the lion \n - explore on your own");
     if(castle == "go with the lion" || castle == "gwtl" || castle == "go with the lion"){
@@ -230,7 +243,7 @@ function Fancy {
     }
 }
     
-function Trapdoor{
+function Trapdoor(){
     alert("The door opened with a loud creek. You heard husstling underneith. The latter was strange. It was made in a way that you had to use each one of your limbs to slowly scale down the latter. It was a long way down to...");
     var madman = prompt("As soon as you hit the ground you heard a chattering of teeth. Than came out a very handsom man with a fancy hat on who said in a skiddish voice. Sorry sorry please come back later the hats not done the hats just not done yet! The man with each passing word would scoot back farther from you. He seemed way scared of you than you were of him. \n - examine the man \n - yell at the man");
     if(madman == "yell at the man" || madman == "yatm"){
@@ -255,7 +268,7 @@ function Trapdoor{
     }
 }
     
-function Frontdoor{
+function Frontdoor(){
     alert("The front door had a wooden sign drapped over the door saying: The Huntress. You knock and nobody comes. You do however hear a high pitched come in.");
     var mouse = prompt("As you turn the handle and walk into this tree house a tiny brown mouse jumps at you! \n - attack the mouse \n - scream");
     if (mouse == "attack the mouse" || mouse == "atm"){
@@ -267,7 +280,7 @@ function Frontdoor{
         alert("Why did you come in here to just be a baby? Don't you know who I am? I am the quenns executioner! I do not have to deal with you. please leave my house. If I dare catch you outside of the tournament when it starts I'll kill you were you stand!");
         var executioner = prompt("\n - continue pushing the mouse \n - leave to the tournament");
         if(executioner == "continue pushing the mouse" || executioner == "cptm"){
-            alert("So why did you" +playerName+ "decide to pusht the executioner? Doesn't that feel like a bad idea? You must be pretty sadistic to pick this death. The mouse doesn't put up with your nonsense and kills you instantly... You deserved this one. Game over");
+            alert("So why did you " +playerName+ " decide to pusht the executioner? Doesn't that feel like a bad idea? You must be pretty sadistic to pick this death. The mouse doesn't put up with your nonsense and kills you instantly... You deserved this one. Game over");
             Frontdoor();
         }
         else if(executioner == "leave to the tournament" || executioner == "lttt"){
@@ -277,27 +290,27 @@ function Frontdoor{
     }
 }
 
-function Upstairs{
+function Upstairs(){
     alert("As it turns out you stumbled on a very important thing! You look into the large room and clearly see the lion from earleir! You have made it to the tournament and it looks like the whole kingdom is here the room is packed!");
     Tournament();
 }
     
-function Tournament{
+function Tournament(){
     alert("Welcome all to the Tournament!!! Yells what you assume to be the queen because of her looks and the crown above her head. The entire room goes silent at the queens shrill voice.");
     alert("It appears like everyone you met from this place is here. You can even see a freaky looking smile above all the people.");
     var challenger = prompt("The queen starts to talk again saying, Now to pick our contestants for the tournament! But first is there anyone in the crowd who does not know how the tournament works?? \n - raise your hand \n - stay silent");
     if(challenger == "stay silent" || challenger == "ss"){
-        alert("Fine than if everyone knows how the games work than we will press forward and pick our loser... * she starts running her hands through a glass jar to pick a random card out* The card read..." +playerName+" ");
+        alert("Fine than if everyone knows how the games work than we will press forward and pick our loser... * she starts running her hands through a glass jar to pick a random card out* The card read... " +playerName+" ");
         End();
     }
     else if(challenger == "raise your hand" || challenger == "ryh"){
-        alert("Oh I see that" +playerName+ "has never been to one of these! Which we all know is punishable by death! And seeing that you aren't of the age of 1 that means you have been dodging this tournament for years! Now everyone in this room is very angry with you so it's clear to me that you must be the loser! a If you are so inclined to know how the games are played to contestents are places into an arena. The two are set up to duel to the death. The all time champion is pre determined to win the duel and the new challenger is pre decided to lose and die. So congradulations you just got number one ticket into the arena! I would wish you luck but there is no way for you to possibly win this.");
+        alert("Oh I see that " +playerName+ " has never been to one of these! Which we all know is punishable by death! And seeing that you aren't of the age of 1 that means you have been dodging this tournament for years! Now everyone in this room is very angry with you so it's clear to me that you must be the loser! a If you are so inclined to know how the games are played to contestents are places into an arena. The two are set up to duel to the death. The all time champion is pre determined to win the duel and the new challenger is pre decided to lose and die. So congradulations you just got number one ticket into the arena! I would wish you luck but there is no way for you to possibly win this.");
         alert("Let's just pretend that you somehow do win thi duel. Not only would you be playing against the rules but my army of guards would be ordered to kill you. It's easeir to just get on your kness and beg that I pass this years tournament than actually fighting me.");
         End();
     }
 }   
 
-function End{
+function End(){
     alert("Being placed in the tournament really puts it all into prespective for you. You see that there is no way to win. They put you in unarmed where as the queen is seriously decked out with weapons. It is also clear to you that there are the queens guards all around the arena.");
     var cavein = prompt("So what do you want to do? It's a lose lose either way.... Pick your poisen. \n - fight the queen \n - give up");
     if(cavein == "give up" || cavein == "gu"){
@@ -312,7 +325,7 @@ function End{
             End();
         }
         else if(giveup == "keep going" || giveup == "kg"){
-            alert("The queen fuming mad starts to dead sprint at you. Her sword above her head ready to come crashing down on you. You suddenly feel the power of the crowd as they all start cheering for you! Every single one of them chanting"  +playerName+ +playerName+ +playerName+ "Your legs start running at her full speed. You don't feel like you are yourself anymore but more like you are everyone in the kigdom. Everyone is on the edge of there seat as the destined loser picks themselves up and charges the queen! The queen angered by this starts to yell at you to stop!");
+            alert("The queen fuming mad starts to dead sprint at you. Her sword above her head ready to come crashing down on you. You suddenly feel the power of the crowd as they all start cheering for you! Every single one of them chanting "  +playerName+ " " +playerName+ " " +playerName+ " Your legs start running at her full speed. You don't feel like you are yourself anymore but more like you are everyone in the kigdom. Everyone is on the edge of there seat as the destined loser picks themselves up and charges the queen! The queen angered by this starts to yell at you to stop!");
             alert("Her pacing starts to slow down. The sword is dropped to her side still ready for a final blow but no longer above her head. She yells in a shrill voice, STOP IT SUBMIT TO ME! I AM YOUR QUEEN LET ME WIN!");
             var winningcard = prompt("\n - submit to the queen \n - fight");
             if(winningcard == "submit to the queen" || winningcard == "sttq"){
@@ -327,13 +340,30 @@ function End{
     }
 }
 
-function Winner{
+function Winner(){
     alert("The crowd all gasps with excitment! The guards all fumble over there own weopons wonder about what to do. One of them asks if they should kill you but another one cuts him off and asks who is going to order you too? Relizing this the guards all surround you and ask you what they should do. The crowd starts cheering you as there new ruler.");
-    var ruler = prompt("Suddenly everyone stops moving or making sound everything just stops. Time itself feels frozen. Suddenly a laughing smile appears infront of you. It reveals itself to be the cat of the woods and it says," +playerName+ "you have come a long way. Far enough to even become king or queen of this kingdom! It says this all with a grin and its body dissapearing and reapearing at random. All you need to do is make the choice! Stay and rule this mad world? Or leave back to your home town back to your dads porch where this all started? \n - stay as ruler \n -return to your normal life");
+    var ruler = prompt("Suddenly everyone stops moving or making sound everything just stops. Time itself feels frozen. Suddenly a laughing smile appears infront of you. It reveals itself to be the cat of the woods and it says, " +playerName+ " you have come a long way. Far enough to even become king or queen of this kingdom! It says this all with a grin and its body dissapearing and reapearing at random. All you need to do is make the choice! Stay and rule this mad world? Or leave back to your home town back to your dads porch where this all started? \n - stay as ruler \n -return to your normal life");
     if(ruler == "stay as ruler" || ruler == "sar"){
         alert("Deciding to see this mad world to an end is very nobal of you. You live the rest of your life as king/queen of the land. solving more of the civil problems in the land and helping those you care about. Congradulations! The end.");
+        var Didyou = confirm("Did you like my game?");
+        if(Didyou){
+            alert("Thank you! Than you probably wouldn't mind running through it one more time.");
+            Game();
+        }
+        else{
+            alert("Than you get a bad ending... Suddenly" +playerName+ " dies and knowbody is there to help. It's a slow and painful death... Game over.");
+        }
     }
     else if(ruler == "return to your normal life" || ruler == "rtynl"){
         alert("You wake up on your dads porch. Everything just feels nice. In the grass in front of you you see a nice cute little bunny nibbling on a carrot. In the flower bed you feel like you can see a king of ants ontop of the old ant hill. In the woods behind the bushes you could have sworn you saw a floating smile above one of the branches. Congradulations. The end.");
+        var Didyoulike = confirm("Did you like my game?");
+        if(Didyoulike){
+            alert("Thank you! Than you probably wouldn't mind running through it one more time.");
+            Game();
+        }
+        else{
+            alert("Than you get a bad ending... Suddenly" +playerName+ " dies and knowbody is there to help. It's a slow and painful death... Game over.");
+        }
     }
+}
 }

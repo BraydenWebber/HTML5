@@ -9,12 +9,12 @@ html,body,div, h1,h2,h3,h4,h5,h6,p,ul,ol,li,header,footer,nav{
 /* Universal Style */
 body
 {
-    background-color:#4cfdb9;
+    background-color:#5f5f5f;
 }
 div#container
 {
     width:100%;
-    background-color:#ff6b99;
+    background-color:#4cfdb9;
 }
 header
 {
@@ -32,6 +32,7 @@ div#content{
     width:100%;
     background-color:#44dda2;
 }
+/*
 nav{
     width:100%;
     background-color: #ff6b99;
@@ -51,6 +52,31 @@ nav ul li a:hover{
     background-color: #b7b7b7;
     color:darkslategray;
 }
+*/
+.icon-bar{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: #555;
+    overflow: auto;
+}
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition:all 0.3s ease;
+    color:white;
+    font-size: 36px;
+}
+.icon-bar a:hover {
+    background-color: #000000;
+}
+.active {
+    background-color: #4cfdb9;
+}
+/*
 footer{
     position:absolute;
     bottom:0;
@@ -71,4 +97,4 @@ div.keepOpen{
         float:none;
         text-align: center;
     }
-}
+}*/

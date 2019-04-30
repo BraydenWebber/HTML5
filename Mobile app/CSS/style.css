@@ -22,9 +22,16 @@ header
     padding:25px;
     background-color: #4cfdb9;
 }
+header img#applogo{
+    display: block;
+    margin: auto;
+    width:100px
+}
 header h1
 {
+    margin: auto;
     color:#535353;
+    text-align: center;
     font-family: 'Permanent Marker', sans-serif;
     font-size:2.8em;
 }

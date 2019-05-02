@@ -14,13 +14,13 @@ body
 div#container
 {
     width:100%;
-    background-color:#4cfdb9;
+    background-color:#ff305c;
 }
 header
 {
     width:94.2%;
     padding:25px;
-    background-color: #4cfdb9;
+    background-color: #ff305c;
 }
 header img#applogo{
     display: block;
@@ -37,7 +37,7 @@ header h1
 }
 div#content{
     width:100%;
-    background-color:#44dda2;
+    background-color:#e52e54;
 }
 /*
 nav{
@@ -81,7 +81,7 @@ nav ul li a:hover{
     background-color: #000000;
 }
 .active {
-    background-color: #4cfdb9;
+    background-color: #ff305c;
 }
 /*
 footer{

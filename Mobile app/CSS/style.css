@@ -30,7 +30,7 @@ header img#applogo{
 header h1
 {
     margin: auto;
-    color:#e52e54;
+    color:#4e4e4e;
     text-align: center;
     font-family: 'Permanent Marker', sans-serif;
     font-size:2.8em;
@@ -49,16 +49,33 @@ div#content img#widow{
 div#content img#genji{
     display:block;
     margin:auto;
-    width 100px
+    width 100px;
+    padding-top: 10px;
 }
 
 div#content h3{
     text-align: center;
     font-size:1.5em;
+    color:#000;
 }
 div#content h4{
     text-align:center;
     font-size:1.5em;
+    color:#000;
+}
+div#content h5{
+    display:block;
+    padding:20px;
+    margin-top: auto;
+    text-align:center;
+    font-size:1.5em;
+    color:#000;
+}
+div#content h6{
+       display:block;
+    text-align:center;
+    font-size:1.5em;
+    color:#000;
 }
 /*
 nav{
@@ -103,6 +120,44 @@ nav ul li a:hover{
 }
 .active {
     background-color: #ff305c;
+}
+div#contentt h3{
+    text-align: center;
+    font-size:1.5em;
+}
+div#contentt img#widdow{
+    display:block;
+    margin:auto;
+    width 100px;
+    padding-top: 10px;
+    color:#c96ceb;
+}
+div#contenttt h3{
+    text-align: center;
+    font-size:1.5em;
+    color:#57e868
+}
+div#contenttt img#genjii{
+    display:block;
+    margin:auto;
+    width 100px;
+    padding-top: 10px;
+}
+div#contentttt h3{
+    text-align: center;
+    font-size:1.5em;
+}
+div#contentttt h4{
+    padding-top: 10px;
+    text-align: center;
+    font-size:1.5em;
+}
+div#contentttt img#meme{
+        display:block;
+    margin:auto;
+    width 100px;
+    padding-top: 10px;
+    
 }
 /*
 footer{

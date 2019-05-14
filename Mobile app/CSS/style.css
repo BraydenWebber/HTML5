@@ -23,13 +23,13 @@ header
     background-color: #ff305c;
 }
 header img#applogo{
+    margin-left: auto;
     display: block;
     margin: auto;
     width:100px
 }
 header h1
 {
-    margin: auto;
     color:#4e4e4e;
     text-align: center;
     font-family: 'Permanent Marker', sans-serif;
@@ -64,19 +64,11 @@ div#content h4{
     color:#000;
 }
 div#content h5{
-    display:block;
-    padding:20px;
-    margin-top: auto;
     text-align:center;
     font-size:1.5em;
     color:#000;
 }
-div#content h6{
-       display:block;
-    text-align:center;
-    font-size:1.5em;
-    color:#000;
-}
+
 /*
 nav{
     width:100%;
@@ -99,7 +91,7 @@ nav ul li a:hover{
 }
 */
 .icon-bar{
-    position: absolute;
+    position: fixed;
     bottom:0;
     left:0;
     width:100%;
@@ -121,16 +113,18 @@ nav ul li a:hover{
 .active {
     background-color: #ff305c;
 }
-div#contentt h3{
-    text-align: center;
-    font-size:1.5em;
-}
-div#contentt img#widdow{
+div#contentt vidoe#Widow {
     display:block;
-    margin:auto;
-    width 100px;
-    padding-top: 10px;
-    color:#c96ceb;
+    margin: auto;
+}
+div#contentt video#Widoww {
+    display:block;
+    margin: auto;
+}
+div#contentt h2{
+        text-align: center;
+    font-size:1.5em;
+    color:#57e868
 }
 div#contenttt h3{
     text-align: center;
@@ -158,6 +152,19 @@ div#contentttt img#meme{
     width 100px;
     padding-top: 10px;
     
+}
+figure.product figcaption{
+    text-align:center;
+    color:#000;
+    font-family: serif;
+    font-size:12px;
+}
+legend, span, input, textarea{
+    display:block;
+    margin:auto;
+    text-align: center;
+    font-family: sans-serif;
+    color:#4e4e4e;
 }
 /*
 footer{

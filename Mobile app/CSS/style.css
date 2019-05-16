@@ -18,15 +18,15 @@ div#container
 }
 header
 {
-    width:94.2%;
+    width:100%;
     padding:25px;
     background-color: #ff305c;
 }
 header img#applogo{
-    margin-left: auto;
+
     display: block;
     margin: auto;
-    width:100px
+    width:100px;
 }
 header h1
 {
@@ -37,6 +37,7 @@ header h1
 }
 div#content{
     width:100%;
+    height:auto;
     background-color:#e52e54;
 }
 
@@ -113,11 +114,23 @@ nav ul li a:hover{
 .active {
     background-color: #ff305c;
 }
-div#contentt vidoe#Widow {
+div#contentt img#Widow {
     display:block;
     margin: auto;
 }
-div#contentt video#Widoww {
+div#contentt img#Widowwwww{
+    display:block;
+    margin: auto;
+}
+div#contentt img#Widoww {
+    display:block;
+    margin: auto;
+}
+div#contentt img#Widowww {
+    display:block;
+    margin: auto;
+}
+div#contentt img#Widowwww {
     display:block;
     margin: auto;
 }
